@@ -3,6 +3,8 @@ import datetime as dt
 from time import sleep
 
 
+print("test test test")
+
 try:
     print("Search for the Button...")
     print("\n\n\n")
