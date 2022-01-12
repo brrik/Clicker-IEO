@@ -3,13 +3,33 @@ import datetime as dt
 from time import sleep
 
 
-print("test test test")
+while True:
+    print("クリック開始時刻を記載してください。")
+    print("指定時刻の10秒前からクリックを開始します。")
+    print("\n\n\n")
+    hourStr = input("時刻    時：")
+    minStr = input("時刻    分：")
+
+    if hourStr != "" and minStr != "" :
+        try:
+            hour = int(hourStr)
+            minute = int(minStr)
+            break
+        except:
+            print("時刻の記入形式が違うようです。再度確認してください。")
+    else:
+        print("時刻に空欄があります。0時・0分のときは0を入力して下さい。")
+    
+
+
 
 try:
     print("Search for the Button...")
     print("\n\n\n")
 
     while True:
+
+        
         x, y = pag.position()
         color = pag.pixel(x,y)
         red = color[0]
